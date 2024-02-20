@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8ac20e5838.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <div class="desktop">
+
+        <!-- Dashboard section -->
+
+        <div class="div">
+
+            <div class="operlap">
+                <div class="rectangle">
+                    <img class="logo" src="images/logo.png" alt="">
+
+                    <h2>Menu</h2>
+
+                    <div class="box-content">
+                        <button class="dashboard">DashBoard</button>
+                        <button class="student">
+                            <img class="imgstud" src="images/student.png" alt="">
+                            Students</button>
+                        <button class="courses">
+                            <img class="imgcour" src="images/courses.png" alt="">
+                            Courses</button>
+                        <button class="modules">
+                            <img class="imgcour" src="images/courses.png" alt="">
+                            Modules</button>
+
+                        <div class="box-container">
+                            <ul>
+                                <li><a href="#">Sub-Module</a></li>
+                                <li><a href="#">Videos</a></li>
+                                <li><a href="#">Assignment</a></li>
+                                <li><a href="#">Quiz</a></li>
+                            </ul>
+                        </div>
+
+                        <button class="department">
+                            <img class="imgdepar" src="images/department.png" alt="">
+                            Department</button>
+                        <button class="staffs">
+                            <img class="imgstaff" src="images/staffs.png" alt="">
+                            Staffs</button>
+                        <button class="setting">
+                            <img src="images/settiing.png" alt="" class="imgsetting">
+                            Settings</button>
+                        <button class="logout">
+                            <img src="images/logout-23.png" alt="" class="imglog">
+                            LogOut</button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Navbar -->
+
+        <nav>
+            <div class="navbar">
+                <!-- Search button -->
+
+                <div class="search-wrapper">
+                    <div class="input-holder">
+                        <input type="text" class="search-input" placeholder="Type to search" />
+                        <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+                    </div>
+                    <span class="close" onclick="searchToggle(this, event);"></span>
+                </div>
+
+                <!-- Notification and message button -->
+
+                <div class="rectangle1">
+                    <button class="bell-btn">
+                        <img src="images/bell.png" alt="" class="bell">
+                    </button>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Sectin -->
+
+        <section>
+            <div class="container">
+                <!-- Profile photo -->
+
+                <div class="profile-level">
+                    <img src="images/profile-level.png" alt="" class="level">
+                    <img src="images/dummy-profile.jpg" alt="" class="profile">
+                    <!-- Welcome message -->
+
+                    <div class="welcome">
+                        <h3>Welcome back,</h3>
+                        <h1>Roshnee Gouda</h1>
+                        <p>Here's what's happening with your courses today</p>
+                        <img src="images/teacher.png" alt="" class="teacher-clip">
+                    </div>
+                </div>
+
+                <!-- Upload Course -->
+
+                <div class="container3">
+                    <div class="upload-courese">
+                        <h4>Are You interested to <br> share your knowledge ?</h4>
+                        <button class="upload-btn"><i class="fa-solid fa-upload"></i>Upload Course</button>
+                    </div>
+                </div>
+
+                <div class="admin_course">
+                    <!-- Total Student -->
+                    <div class="stud1">
+                        <h3 class="Stud-text1">Total Student</h3>
+                        <div class="student-container">
+                            <img src="images/student.png" alt="image" class="stud">
+                            <h1>720+</h1>
+                        </div>
+                    </div>
+
+                    <!-- Total Courses -->
+                    <div class="cour1">
+                        <h3 class="Stud-text2">Total Courses</h3>
+                        <div class="course-container">
+                            <img src="images/courses.png" alt="image" class="cour">
+                            <h1>20+</h1>
+                        </div>
+                    </div>
+
+                    <!-- Sylabus Completed -->
+                    <div class="progress">
+                        <h3 class="Stud-text3">Syllabus Completed</h3>
+                        <div class="sylabus-container">
+                            <!-- donut chart start -->
+                            <div class="ct-donut-wrapper">
+                                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 44 44" width="120px" height="100px">
+                                    <circle cx="50%" cy="50%" fill="transparent" r="15.909091" stroke="#eee"
+                                        stroke-width="10">
+                                    </circle>
+
+                                    <circle show-tip="ctDonutTip" class="ct-donut-slice" cx="50%" cy="50%"
+                                        fill="transparent" r="15.909091" stroke="#ff3366" stroke-dasharray="10 90"
+                                        stroke-width="10" stroke-dashoffset="25" slice-title="Not Completed"
+                                        percent-value="10%" usage="100" total-val="1000">
+                                        <animate attributeName="stroke-dashoffset" from="100" to="25" dur="0.5s" />
+                                    </circle>
+
+                                    <circle show-tip="ctDonutTip" class="ct-donut-slice" cx="50%" cy="50%"
+                                        fill="transparent" r="15.909091" stroke="orange" stroke-dasharray="35 65"
+                                        stroke-width="10" stroke-dashoffset="15" slice-title="Remain"
+                                        percent-value="35%" usage="350" total-val="1000">
+                                        <animate attributeName="stroke-dashoffset" from="100" to="15" dur="0.5s" />
+                                    </circle>
+
+                                    <circle show-tip="ctDonutTip" class="ct-donut-slice" cx="50%" cy="50%"
+                                        fill="transparent" r="15.909091" stroke="#33cc99" stroke-dasharray="55 45"
+                                        stroke-width="10" stroke-dashoffset="-20" slice-title="Completed"
+                                        percent-value="55%" usage="550" total-val="1000">
+                                        <animate attributeName="stroke-dashoffset" from="100" to="-20" dur="0.5s" />
+                                    </circle>
+
+                                    <circle cx="50%" cy="50%" fill="rgba(82, 235, 235)" r="16"> </circle>
+                                    <text x="50%" y="55%" class="ct-donut-center">Syllabus</text>
+
+                                </svg>
+                                <div class="ct-tip"></div>
+
+                            </div>
+                            <!-- donut chart end -->
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Calander -->
+
+                <div class="tarrik">
+                    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+                        rel="stylesheet" />
+                    <div class="card">
+                        <div class="calendar-toolbar">
+                            <button class="prev month-btn"><i class="fas fa-chevron-left"></i></button>
+                            <div class="current-month"></div>
+                            <button class="next month-btn"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="calendar">
+                            <div class="weekdays">
+                                <div class="weekday-name">Sa</div>
+                                <div class="weekday-name">Su</div>
+                                <div class="weekday-name">Mo</div>
+                                <div class="weekday-name">Tu</div>
+                                <div class="weekday-name">We</div>
+                                <div class="weekday-name">Th</div>
+                                <div class="weekday-name">Fr</div>
+                            </div>
+                            <div class="calendar-days"></div>
+                        </div>
+                        <!-- <div class="goto-buttons">
+                        <button type="button" class="btn prev-year">Prev Year</button>
+                        <button type="button" class="btn today">Today</button>
+                        <button type="button" class="btn next-year">Next Year</button>
+                      </div>
+                    </div> -->
+                    </div>
+                </div>
+
+
+
+
+                <!-- Question and Answer -->
+
+                <div class="question">
+                    <h1>?</h1>
+                </div>
+        </section>
+
+    </div>
+
+
+
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
